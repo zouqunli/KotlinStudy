@@ -2,7 +2,7 @@ package cn.mdm.lib.basic
 
 /**
  * 空指针处理
- * 关键字 ?,!!
+ * 关键字 ?,!!,?:
  */
 //1.方法默认不能返回null
 //fun getName():String{

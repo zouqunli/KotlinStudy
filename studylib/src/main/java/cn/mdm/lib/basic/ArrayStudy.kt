@@ -42,17 +42,20 @@ fun main(args: Array<String>) {
         it.name
     }.apply {
         println(this)
-        //  [A/B/=]
+        //  [LiSi/ak/=]
     })
 
     //6.数组切片分割
     //参数传区间 若区间超过数组长度会报异常
     //slice返回的是List<T>类型
     val one:List<Man> = arrayOfMan.slice(0..2)
-    println(one[0])
+    println(one[0]) //也可以使用one.get(0)来取值
     //sliceArray返回的是Array<T>类型
     val arrayMan:Array<Man> = arrayOfMan.sliceArray(1..2)
     println(arrayMan[0])
+
+    //打印原数组是否有变化,分割不会有变化
+    println(arrayOfMan.size)
 
 }
 
