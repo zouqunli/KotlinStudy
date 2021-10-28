@@ -38,8 +38,10 @@ fun message(msg:String){
 // hellWorld 函数的的类型是 () -> Unit   如： Function0
 // message 是 (Int) -> Unit     如： Function1
 // sum 是 (Int,Int) -> Int      如： Function2
-// hello 就比较复杂类似套娃 他的参数本身是个类型 所以他的结构是 ((Int,Int)->Int) -> Int
-// hello2 是 (Long,(Int,Int,Int)->Long) -> String
+// hello 就比较复杂类似套娃 他的参数本身是个类型 所以他的结构是 ((Int,Int)->Int) -> Int      如：Function1
+// hello2 是 (Long,(Int,Int,Int)->Long) -> String                                      如：Function2
+// hello3 是 (Long,(Int,Int,Int)->Long,String) -> String                               如：Function3
+// hello4 是 (Long,(Int,Int,Int)->Long,(Int,Int)->Int) -> String                       如：Function3
 
 fun main(args: Array<String>) {
     println(sum1(1,2))
