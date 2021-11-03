@@ -24,7 +24,36 @@ const val FINAL_HELLO_THREE = "Hello_Three"
 var value1:String = "aaa"
 var value2 = "bbb"
 
+//4.静态变量/常量
+class Test{
+    //在类中声明需要加上companion关键字 并且可以起个别名
+    //这里ValOrVar就是别名 也可以不写 建议是不写
+    companion object ValOrVar{
+        //静态变量
+        var isHello = true
+        //静态常量
+        const val MY_COMPUTER_NAME = "macbook pro"
+        //静态方法
+        fun todo(){
+            println("todo")
+        }
+    }
+}
+//若是单独作为一个静态文件独立于类之外就可以不用写companion关键字 默认里面的数据就是静态的
+//这时候一定要起个别名，不然就不知道怎么访问了这里的别名就是TTT
+object TTT{
+    //静态变量
+    var isHello = true
+    //静态常量
+    const val MY_COMPUTER_NAME = "macbook pro"
+    //静态方法
+    fun todo(){
+        println("todo")
+    }
+}
+
 fun main(args: Array<String>) {
+
     //这3个可以使用kotlin Bytecode工具看一下区别
     //打开方法：工具栏Tools -> kotlin -> show kotlin Bytecode
     //可以查看反编译java的类 点击窗口的Decompile按钮
@@ -38,4 +67,8 @@ fun main(args: Array<String>) {
     println(value1)
     //打印第二个变量
     println(value2)
+
+    if(Test.isHello){
+        Test.todo()
+    }
 }
