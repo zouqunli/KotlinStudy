@@ -19,6 +19,23 @@ fun main(args: Array<String>) {
     for(i in arrayOfInt){
         println(i)
     }
+    //遍历一个数组/列表，想同时取出下标和元素
+    for ((index,e) in arrayOfInt.withIndex()){
+        println("下标=$index----元素=$e")
+    }
+    //遍历一个数组/列表，只取出下标:
+    for (index in arrayOfInt.indices){
+        println("index=$index")//输出0，1，2
+    }
+    //倒序遍历就该使用标准库中定义的downTo()函数
+    for (index in 100 downTo 1){
+        print(index)
+    }
+    //使用2作为遍历的步长，可以使用step()函数
+    for (index in 1..100 step 2){
+        print(index)//会输出1..3..5......
+    }
+
     //4.提取某个具体值
     println(arrayOfString[1])
     println(arrayOfMan[0])
